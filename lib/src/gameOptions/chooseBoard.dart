@@ -74,10 +74,14 @@ class _ChooseBoardState extends State<ChooseBoard> {
                   height: 40.0,
                   width: 100.0,
                   alignment: Alignment.center,
-                  child: Text(
-                    "START",
-                    textAlign: TextAlign.center,
-                    textScaleFactor: 2.0,
+                  child: TextButton(
+                    // TODO check about macOS routes
+                    onPressed: () => Navigator.pushNamed(context, '/play'),
+                    child: Text(
+                      "START",
+                      textAlign: TextAlign.center,
+                      textScaleFactor: 2.0,
+                    ),
                   ),
                 ),
               ),
@@ -124,7 +128,7 @@ class _ChooseBoardState extends State<ChooseBoard> {
                 borderRadius: BorderRadius.circular(4.0),
               ),
               // TODO if child == text; then
-              // make text bigger with the contaioner
+              // make text bigger with the container
               child: Text(opt),
             ),
           ),
